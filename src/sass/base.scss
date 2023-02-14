@@ -1,0 +1,319 @@
+// general
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+ul[class] {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+input,
+button {
+  &:hover,
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:active, &:focus, &:hover {
+    opacity: 0.85;
+  }
+}
+
+html {
+  height: 100%;
+  overflow-y: auto;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  font-family: "Montserrat", serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 120%;
+  background: #fff;
+
+  &.overflow {
+    overflow: hidden;
+  }
+}
+
+.container {
+  max-width: 148rem;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+ul {
+  list-style: none;
+}
+
+
+button {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.footer {
+  flex: 0 0 auto;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 100vw  / (1920/10);
+}
+
+.object-fit {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.6rem;
+  line-height: 109.5%;
+  color: #26698F;
+  font-weight: 400;
+  max-width: 80rem;
+
+  b {
+    font-weight: 900;
+  }
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 2.4rem;
+  line-height: 2.9rem;
+  text-transform: uppercase;
+  color: #26698F;
+
+  small {
+    text-transform: none;
+    font-weight: 500;
+    display: block;
+    margin-top: .5rem;
+    font-size: 1.6rem;
+    line-height: 112.5%;
+  }
+}
+
+.btn {
+  line-height: 2rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.7rem 4.0rem;
+  height: 5.4rem;
+  background: #26698F;
+  border: none;
+  border-radius: 1rem;
+  width: fit-content;
+}
+
+.slider {
+  &-btn {
+    &__btns {
+      display: flex;
+      align-items: center;
+      position: relative;
+      height: 4.2rem;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        height: 100%;
+        width: 2px;
+        border-radius: 2px;
+        background: #26698F;
+      }
+    }
+
+    &__btn {
+      width: 2.7rem;
+      height: 2.6rem;
+
+      &-prev {
+        margin-right: .7rem;
+      }
+
+      &-next {
+        margin-left: .7rem;
+
+        .slider-btn__svg {
+          transform: rotate(180deg);
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $large-desktop) {
+  html {
+    font-size: 100vw / (1600/10);
+  }
+}
+
+
+@media only screen and (max-width: $small-desktop) {
+  html {
+    font-size: 100vw / (1440/10);
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  html {
+    font-size: 100vw / (998/10);
+  }
+  .link {
+    &:after {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-tablet) {
+  html {
+    font-size: 100vw / (800/10);
+  }
+  .container {
+    padding: 0 2rem;
+  }
+  .breadcrumb {
+    display: none;
+  }
+  .schedule {
+    display: none;
+  }
+  body {
+    font-size: 2rem;
+  }
+  .pt-12 {
+    padding-top: 15.1rem;
+  }
+  .pb-14 {
+    padding-bottom: 8.4rem;
+  }
+  h5 {
+    font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  html {
+    font-size: 100vw / (580/10);
+  }
+  body {
+    font-size: 1.6rem;
+  }
+  h2 {
+    font-size: 1.9rem;
+    line-height: 130%;
+    max-width: 32rem;
+  }
+  h4 {
+    margin-bottom: .8rem;
+    font-size: 1.4rem;
+    line-height: 100%;
+  }
+
+  .btn {
+    &-play {
+      border-radius: 5px;
+      height: 4.2rem;
+      width: 7.2rem;
+
+      &__svg {
+        height: 1.3rem;
+        width: 1.2rem;
+      }
+    }
+  }
+  .blog {
+    &__caption {
+      margin-top: 4rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-mobile) {
+  html {
+    font-size: 100vw / (360/10);
+  }
+}
