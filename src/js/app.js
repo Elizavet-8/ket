@@ -31,13 +31,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 slidesPerView: 2,
             },
             999: {
-                slidesPerView: 4,
+                slidesPerView: 5,
             },
         }
     });
     var manufacturers__slider = new Swiper(".manufacturers-slider__slider", {
         slidesPerView: 1,
-        spaceBetween: 38,
+        spaceBetween: 28,
         navigation: {
             nextEl: ".manufacturers-slider__btn-next",
             prevEl: ".manufacturers-slider__btn-prev",

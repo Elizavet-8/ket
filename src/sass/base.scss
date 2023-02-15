@@ -121,6 +121,7 @@ button {
 
 main {
   flex: 1 0 auto;
+  padding-top: 20rem;
 }
 
 .footer {
@@ -166,6 +167,10 @@ h2 {
     font-size: 1.6rem;
     line-height: 112.5%;
   }
+}
+
+h3 {
+  font-weight: 500;
 }
 
 .btn {

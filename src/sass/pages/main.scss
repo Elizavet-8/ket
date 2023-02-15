@@ -6,7 +6,6 @@
   background-position: center;
   background-size: 100% 48rem;
   height: 48rem;
-  margin-top: 20rem;
   padding: 3.7rem 0 6.9rem;
 
   &-line {
@@ -31,7 +30,7 @@
     position: absolute;
     top: 25.2rem;
     right: 20rem;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 1.6rem;
     line-height: 130%;
     text-transform: uppercase;
@@ -136,6 +135,7 @@
     border-radius: 1rem;
     padding: 1.7rem 1.5rem;
     color: #000000;
+    height: fit-content;
 
     &__title {
       font-weight: 400;
@@ -149,7 +149,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: .6rem 0;
+      padding: .9rem 0;
     }
 
     &__subtitle {
@@ -194,10 +194,6 @@
   }
 
   &-main {
-    grid-row-start: 1;
-    grid-row-end: 3;
-    grid-column-start: 2;
-    grid-column-end: 3;
     padding-left: 5.7rem;
 
     &__list {
@@ -241,6 +237,7 @@
       margin: 1.5rem 0 1rem;
       color: #070C11;
       font-size: 1.4rem;
+      font-weight: 500;
     }
 
     &__bottom {
@@ -369,6 +366,7 @@
         svg {
           width: 2.2rem;
           height: 2.2rem;
+
           path {
             opacity: .2;
           }
@@ -390,7 +388,7 @@
       }
 
       &__label {
-        font-weight: 900;
+        font-weight: 500;
         font-size: 1.6rem;
         margin-right: 1.5rem;
 
@@ -433,13 +431,13 @@
         border-radius: 1rem;
         width: 100%;
         height: 100%;
-        font-weight: 500;
         line-height: 112.5%;
         color: #FFFFFF;
         padding: 2.8rem 2.5rem 3.5rem;
       }
 
       &__subtitle {
+        font-weight: 500;
         font-size: 2rem;
         line-height: 120%;
         text-transform: uppercase;
@@ -492,12 +490,12 @@
 .answer {
   &__row {
     display: flex;
-    align-items: center;
     justify-content: space-between;
   }
 
   &-question {
     padding-right: 12rem;
+    padding-top: 3rem;
     width: 100%;
 
     &__row {
@@ -515,6 +513,7 @@
 
       &__body {
         display: none;
+        padding-bottom: 2.8rem;
       }
 
       &__head.active {
@@ -527,7 +526,6 @@
 
       &__item {
         border-top: 1px solid #327395;
-        padding-bottom: 2.8rem;
       }
 
       &__head {
@@ -595,6 +593,7 @@
     background: #F0F0F0;
     border-radius: 1rem;
     padding: 4.8rem 9.4rem;
+    height: 38.2rem;
   }
 
   &-slider {
@@ -667,6 +666,10 @@
 .manufacturers {
   padding: 10rem 0;
 
+  &_pb {
+    padding-bottom: 0;
+  }
+
   &__row {
     display: flex;
     align-items: center;
@@ -681,6 +684,17 @@
     &__slide {
       height: 5.8rem;
       width: auto !important;
+    }
+
+    &__link {
+      display: block;
+      opacity: .5;
+      max-width: 21.8rem;
+      height: 5.8rem;
+
+      &:active, &:focus {
+        opacity: 1;
+      }
     }
 
     &__content {
@@ -716,7 +730,6 @@
   }
 
   &__subtitle {
-    font-weight: 400;
     font-size: 1.6rem;
     line-height: 112.5%;
     color: #327395;

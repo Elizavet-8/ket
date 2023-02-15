@@ -1,0 +1,137 @@
+.description-main {
+  padding: 3.5rem 0 5.3rem;
+
+  &__text {
+    margin-top: 2.5rem;
+    line-height: 163.9%;
+    color: #6F6F6F;
+    max-width: 108.8rem;
+
+    p {
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.banner {
+  padding-bottom: 4.4rem;
+
+  &__content {
+    position: relative;
+    background-image: url("../../dist/images/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    color: #FFFFFF;
+    padding: 2rem 11.5rem;
+    height: 19.7rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2.4rem;
+    line-height: 109.5%;
+  }
+
+  &__title {
+    color: #FFFFFF;
+    margin-bottom: 1.3rem;
+  }
+}
+
+.catalog-filter {
+  background: #F0F0F0;
+  border-radius: 1rem;
+  padding: 1.7rem 1.5rem;
+  color: #000000;
+  height: fit-content;
+
+  &-accordion {
+    background: none;
+    border-radius: 0;
+    padding: 0 0 1rem;
+    border-bottom: 1px solid #939393;
+  }
+
+  &-banner {
+    background-image: url("../../dist/images/catalog-banner2.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 47.8rem;
+    border-radius: 1rem;
+    margin-top: 5.8rem;
+    font-size: 3.2rem;
+    line-height: 109.5%;
+    color: #FFFFFF;
+    padding: 2.9rem .8rem 2.9rem 1.7rem;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 2rem;
+    line-height: 120%;
+    text-transform: uppercase;
+    margin-top: 2.4rem;
+  }
+
+  &__form {
+    display: block;
+  }
+
+  &__group {
+    padding-top: 1.6rem;
+  }
+
+  &__input {
+    display: flex;
+    align-items: center;
+    padding: 1rem 2rem;
+    height: 4.8rem;
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid #EAEAF0;
+    border-radius: 4px;
+    margin-top: 4px;
+  }
+
+  &__row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 0 -.7rem;
+  }
+
+  &__col {
+    padding: 0 .7rem;
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    margin: 3.4rem -3px 0;
+  }
+
+  &__item {
+    padding: 0 3px;
+  }
+
+  &__btn {
+    font-weight: 400;
+    font-size: 1.3rem;
+    line-height: 2.0rem;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    padding: 1.7rem 1rem;
+    height: 5.4rem;
+    width: 100%;
+
+    &_blue {
+      background: transparent;
+      border: 1px solid #2D9CDB;
+      color: #2D9CDB;
+      margin-right: 0;
+    }
+  }
+}
