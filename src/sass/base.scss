@@ -229,6 +229,14 @@ h3 {
   }
 }
 
+.tab__block {
+  display: none;
+
+  &:first-child {
+    display: block;
+  }
+}
+
 @media only screen and (max-width: $large-desktop) {
   html {
     font-size: 100vw / (1600/10);

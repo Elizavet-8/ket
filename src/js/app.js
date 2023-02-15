@@ -65,6 +65,21 @@ document.addEventListener("DOMContentLoaded", function () {
         },
     });
 
+    //табы
+    (function ($) {
+        $('.tab .tab__tabs .tab__tab').click(function (g) {
+            var tab = $(this).closest('.tab'),
+                index = $(this).closest('.tab__tab').index();
+
+            tab.find('.tab__tabs > .tab__tab').removeClass('active');
+            $(this).closest('.tab__tab').addClass('active');
+
+            tab.find('.tab__content').find('.tab__block').not('.tab__block:eq(' + index + ')').slideUp();
+            tab.find('.tab__content').find('.tab__block:eq(' + index + ')').slideDown();
+
+            g.preventDefault();
+        });
+    })(jQuery);
 
     //аккардион
     $(".answer-question-accordion__head.active").next(".answer-question-accordion__body").slideDown();

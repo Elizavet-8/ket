@@ -1,0 +1,34 @@
+.catalog-tab {
+  padding: 6.9rem 0 8rem;
+
+  &__tabs {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #26698F;
+  }
+
+  &__tab {
+    padding: .9rem 1.8rem;
+    border-right: 1px solid #26698F;
+    color: #000000;
+    transition: .3s;
+
+    &:last-child {
+      border-right: none;
+    }
+
+    &.active {
+      font-weight: 500;
+      color: #26698F;
+      border-bottom: 3px solid #26698F;
+    }
+  }
+
+  &__block {
+    max-width: 87.4rem;
+    margin-top: 2.2rem;
+    line-height: 150%;
+    color: #828282;
+  }
+}
