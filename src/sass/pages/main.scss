@@ -354,6 +354,7 @@
         width: 2.2rem;
         height: 2.2rem;
         margin-right: 1rem;
+        padding: 0;
 
         &.active {
           svg {
@@ -489,8 +490,8 @@
 
 .answer {
   &__row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 75rem;
   }
 
   &-question {
@@ -536,8 +537,8 @@
 
       &__circle {
         margin-top: 2rem;
-        width: 2rem;
-        height: 2rem;
+        width: 20px;
+        height: 20px;
         background: #26698F;
         border-radius: 50%;
         display: flex;
@@ -547,16 +548,16 @@
         margin-left: 4rem;
 
         &_line, &:before {
-          width: 7px;
-          height: 1.5px;
+          width: 9px;
+          height: 2px;
+          top: 9px;
+          left: 6px;
           background: #FFFFFF;
         }
 
         &:before {
           content: '';
           position: absolute;
-          top: 8.5px;
-          left: 5.5px;
           transition: 0.3s;
         }
       }
@@ -620,7 +621,8 @@
     }
 
     &__slide {
-      display: flex;
+      display: grid;
+      grid-template-columns: 16rem 1fr;
       padding: 2.5rem 0 6.9rem;
       box-sizing: border-box;
     }
@@ -636,7 +638,6 @@
 
     &__texts {
       padding-top: 1.5rem;
-      padding-left: 2.8rem;
       font-weight: 500;
       line-height: 112.5%;
       color: #6F6F6F;
@@ -723,7 +724,7 @@
   }
 
   &__illustration {
-    width: 29.8rem;
+    width: 100%;
     height: 16.8rem;
     border-radius: 1rem;
     overflow: hidden;
@@ -795,4 +796,449 @@
   }
 }
 
+@media only screen and (max-width: $small-desktop) {
+  .info {
+    &__grid {
+      margin: 3.6rem -1rem 0;
+    }
 
+    &__col {
+      padding: 0 1rem;
+    }
+  }
+  .answer {
+    &-question {
+      padding-right: 5rem;
+      padding-top: 3rem;
+      width: 100%;
+    }
+
+    &-reviews {
+      background: #F0F0F0;
+      border-radius: 1rem;
+      padding: 4.8rem 4.8rem 4.8rem 7rem;
+      height: 38.2rem;
+    }
+
+    &-slider {
+      width: 50rem;
+    }
+  }
+
+}
+
+@media only screen and (max-width: $large-tablet) {
+  .answer__row {
+    display: grid;
+    grid-template-columns: 1fr 60rem;
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  .main {
+    background-position: top center;
+    background-size: cover;
+    height: 43rem;
+    padding: 3rem 0 4rem;
+
+    &-line {
+      font-size: 1.8rem;
+      width: 65rem;
+      height: 4.5rem;
+      padding-right: 15rem;
+      top: 20rem;
+    }
+
+    &-circle {
+      top: 22rem;
+      right: 8rem;
+      font-size: 1.2rem;
+      max-width: 176px;
+      height: 14.2rem;
+
+      &:before {
+        width: 14rem;
+        height: 14rem;
+      }
+
+      &:after {
+        width: 16rem;
+        height: 16rem;
+      }
+    }
+  }
+
+  .merit {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 2.2rem 4rem;
+    }
+
+    &__item {
+      &:nth-child(2n) {
+        border-right: none;
+        padding-right: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  .catalog {
+    &__grid {
+      grid-template-columns: 1fr;
+    }
+
+    &-banner {
+      display: none;
+    }
+
+    &-main {
+      padding: 3rem 0 0;
+
+      &__list {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      &-help {
+        &__content {
+          padding: 2rem 1.8rem;
+        }
+
+        &__text, &__subtitle {
+          padding-right: 5rem;
+        }
+
+        &__subtitle {
+          font-size: 1.6rem;
+          margin-bottom: .8rem;
+        }
+      }
+    }
+  }
+
+  .answer {
+    &__row {
+      grid-template-columns: 1fr;
+    }
+
+    &-question {
+      padding: 0;
+
+      &-accordion {
+        &__head {
+          display: grid;
+          grid-template-columns: 1fr 4rem;
+        }
+
+        &__circle {
+          margin-left: auto;
+        }
+
+        &__subtitle, &__body {
+          width: auto;
+        }
+      }
+    }
+
+    &-reviews {
+      height: auto;
+    }
+
+    &-slider {
+      width: 70rem;
+
+      &__slide {
+        padding: 2.5rem 0;
+      }
+
+      &__texts {
+        max-width: 100%;
+      }
+
+      &__pagination.swiper-pagination {
+        margin-top: 2rem;
+      }
+    }
+  }
+
+  .info {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      margin: -1.5rem -3rem;
+      padding-top: 3rem;
+    }
+
+    &__col {
+      padding: 1.5rem 3rem;
+    }
+  }
+
+  .application {
+    padding: 6rem 0 2rem;
+  }
+}
+
+@media only screen and (max-width: $small-tablet) {
+  .main {
+    height: 48rem;
+
+    &-line {
+      font-size: 1.4rem;
+      width: 48rem;
+      height: 3.5rem;
+      padding-right: 12rem;
+      top: 23rem;
+    }
+
+    &-circle {
+      top: auto;
+      bottom: 6rem;
+      font-size: 1rem;
+      max-width: 18rem;
+      height: 12rem;
+
+      &:before, &:after {
+        width: 12rem;
+        height: 12rem;
+      }
+
+      &:before {
+        left: -1.5rem;
+      }
+    }
+  }
+
+  .catalog {
+    &-main {
+      &__list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      &-help {
+        &__list {
+          grid-template-columns: repeat(2, 1fr);
+          margin: -1.8rem;
+        }
+
+        &__item {
+          padding: 1.8rem;
+        }
+      }
+    }
+  }
+
+  .answer-slider {
+    width: 58rem;
+  }
+
+  .manufacturers {
+    padding: 4rem 0;
+  }
+
+  .application {
+    &__grid {
+      margin: -0.8rem -1rem;
+    }
+
+    &__group {
+      padding: 0.8rem 1rem;
+    }
+
+    &__input {
+      height: 5.5rem;
+      padding: 1.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .merit {
+    padding: 3.5rem 0;
+
+    &__list {
+      grid-template-columns: 1fr;
+    }
+
+    &__item {
+      border-right: none;
+      padding: 0;
+      margin-right: 0;
+      margin-bottom: 2.5rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &__svg {
+      width: 3.5rem;
+      height: auto;
+    }
+  }
+
+  .catalog {
+    &-main {
+      &-head {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__btns {
+          justify-content: flex-end;
+          width: 100%;
+          margin-bottom: 1rem;
+        }
+
+        &__selects {
+          justify-content: space-between;
+        }
+      }
+
+      &-help {
+        &__list {
+          grid-template-columns: 1fr;
+          margin: 0;
+        }
+
+        &__item {
+          padding: 1rem;
+        }
+
+        &__svg {
+          width: 5rem;
+        }
+      }
+    }
+  }
+
+  .answer {
+    &-reviews {
+      padding: 2rem;
+    }
+
+    &-slider {
+      width: 50rem;
+
+      &__pagination.swiper-pagination {
+        margin-top: 2rem;
+        margin-left: 0;
+      }
+
+      &__texts {
+        padding: 0;
+      }
+    }
+  }
+
+  .application__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .info {
+    &__grid {
+      margin: -1.5rem;
+    }
+
+    &__col {
+      padding: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-mobile) {
+  .main {
+    &-circle {
+      top: 22rem;
+      right: 2rem;
+    }
+
+    &-line {
+      font-size: 1.2rem;
+      width: 40rem;
+      height: 3.5rem;
+      padding-right: 9rem;
+      top: 18rem;
+    }
+  }
+
+  .catalog {
+    &-main {
+      &-head {
+        &__selects {
+          flex-direction: column;
+          align-items: flex-end;
+          width: 100%;
+        }
+
+        &__group {
+          margin: 0 0 1rem;
+        }
+      }
+
+      &__list {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .answer {
+    &-question {
+      &-accordion {
+        &__date {
+          width: 7rem;
+          height: 3rem;
+          font-size: 1.2rem;
+          border-radius: 3px;
+        }
+
+        &__body, &__subtitle {
+          margin-left: 8rem;
+        }
+
+        &__subtitle, &__circle {
+          margin-top: 1.2rem;
+        }
+
+        &__subtitle {
+
+          margin-bottom: 1.2rem;
+        }
+
+      }
+    }
+
+    &-reviews {
+      padding: 2rem;
+      margin: 0 -1.2rem;
+      border-radius: 0;
+    }
+
+    &-slider {
+      width: 41rem;
+
+      &__slide {
+        grid-template-columns: 9.5rem 1fr;
+      }
+
+      &__subtitle {
+        margin-bottom: 0.6rem;
+      }
+
+      &__img {
+        width: 8rem;
+        height: 8rem;
+      }
+    }
+  }
+
+  .info {
+    &__grid {
+      margin: -.5rem;
+    }
+
+    &__col {
+      padding: .5rem;
+    }
+  }
+}

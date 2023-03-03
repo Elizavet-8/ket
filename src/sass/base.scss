@@ -226,6 +226,10 @@ h3 {
         }
       }
     }
+
+    &__svg {
+      width: 100%;
+    }
   }
 }
 
@@ -234,6 +238,36 @@ h3 {
 
   &:first-child {
     display: block;
+  }
+}
+
+.breadcrumb {
+  padding: 1.2rem 0 3.5rem;
+
+  &__list {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 163.9%;
+    color: #6F6F6F;
+
+    &:after {
+      content: '/';
+      margin: 0 .6rem;
+    }
+
+    &:last-child {
+      font-weight: 900;
+
+      &:after {
+        content: none;
+      }
+    }
   }
 }
 
@@ -254,10 +288,11 @@ h3 {
   html {
     font-size: 100vw / (998/10);
   }
-  .link {
-    &:after {
-      width: 100%;
-    }
+  .container {
+    padding: 0 5rem;
+  }
+  main {
+    padding-top: 5.5rem;
   }
 }
 
@@ -265,68 +300,27 @@ h3 {
   html {
     font-size: 100vw / (800/10);
   }
-  .container {
-    padding: 0 2rem;
-  }
-  .breadcrumb {
-    display: none;
-  }
-  .schedule {
-    display: none;
-  }
-  body {
-    font-size: 2rem;
-  }
-  .pt-12 {
-    padding-top: 15.1rem;
-  }
-  .pb-14 {
-    padding-bottom: 8.4rem;
-  }
-  h5 {
-    font-size: 1.6rem;
-  }
+
+
 }
 
 @media only screen and (max-width: $large-mobile) {
   html {
     font-size: 100vw / (580/10);
   }
-  body {
-    font-size: 1.6rem;
-  }
-  h2 {
-    font-size: 1.9rem;
-    line-height: 130%;
-    max-width: 32rem;
-  }
-  h4 {
-    margin-bottom: .8rem;
-    font-size: 1.4rem;
-    line-height: 100%;
-  }
-
-  .btn {
-    &-play {
-      border-radius: 5px;
-      height: 4.2rem;
-      width: 7.2rem;
-
-      &__svg {
-        height: 1.3rem;
-        width: 1.2rem;
-      }
-    }
-  }
-  .blog {
-    &__caption {
-      margin-top: 4rem;
-    }
+  .container {
+    padding: 0 2rem;
   }
 }
 
 @media only screen and (max-width: $small-mobile) {
   html {
-    font-size: 100vw / (360/10);
+    font-size: 100vw / (450/10);
+  }
+  .container {
+    padding: 0 1.2rem;
+  }
+  h1 {
+    font-size: 2.8rem;
   }
 }

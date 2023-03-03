@@ -1,5 +1,5 @@
 .description-main {
-  padding: 3.5rem 0 5.3rem;
+  padding-bottom: 5.3rem;
 
   &__text {
     margin-top: 2.5rem;
@@ -133,5 +133,21 @@
       color: #2D9CDB;
       margin-right: 0;
     }
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  .catalog-filter-banner {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $small-tablet) {
+  .banner__content {
+    background-position: center left;
+    padding: 2rem 4rem;
+    height: 15rem;
+    font-size: 2rem;
+    border-radius: 2rem;
   }
 }

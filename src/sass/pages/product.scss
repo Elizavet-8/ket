@@ -1,34 +1,236 @@
-.catalog-tab {
-  padding: 6.9rem 0 8rem;
+.catalog {
+  &-tab {
+    padding: 6.9rem 0 8rem;
 
-  &__tabs {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    border-bottom: 1px solid #26698F;
-  }
-
-  &__tab {
-    padding: .9rem 1.8rem;
-    border-right: 1px solid #26698F;
-    color: #000000;
-    transition: .3s;
-
-    &:last-child {
-      border-right: none;
+    &__tabs {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      border-bottom: 1px solid #26698F;
     }
 
-    &.active {
+    &__tab {
+      padding: .9rem 1.8rem;
+      border-right: 1px solid #26698F;
+      color: #000000;
+      transition: .3s;
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &.active {
+        font-weight: 500;
+        color: #26698F;
+        border-bottom: 3px solid #26698F;
+      }
+    }
+
+    &__block {
+      max-width: 87.4rem;
+      margin-top: 2.2rem;
+      line-height: 150%;
+      color: #828282;
+    }
+  }
+
+  &-product {
+    display: grid;
+    grid-template-columns: 49.4rem 1fr;
+
+    &__block {
+      position: relative;
+    }
+
+    &-check {
+      &__row {
+        position: absolute;
+        right: 1.8rem;
+        top: 1.6rem;
+        display: flex;
+      }
+
+      &__label {
+        margin-left: 1.8rem;
+      }
+    }
+
+    &__img {
+      width: 100%;
+      height: 38.8rem;
+      padding: 2.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    &__content {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column;
+      padding-left: 2.7rem;
+    }
+
+    &__title {
       font-weight: 500;
-      color: #26698F;
-      border-bottom: 3px solid #26698F;
+      font-size: 1.6rem;
+      line-height: 112.5%;
+      text-transform: uppercase;
+      color: #070C11;
+      margin-bottom: 1.2rem;
+    }
+
+    &__small {
+      font-size: 1.4rem;
+      color: #C0C0C0;
+    }
+
+    &__list {
+      padding: 1.2rem 0;
+    }
+
+    &__item {
+      font-size: 1.4rem;
+      line-height: 120%;
+      color: #565656;
+      position: relative;
+      padding-left: 1.8rem;
+      margin-bottom: .6rem;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 0.6rem;
+        left: 0.6rem;
+        background: #565656;
+        border-radius: 50%;
+        width: 3px;
+        height: 3px;
+      }
+    }
+
+    &__status {
+      font-weight: 500;
+      font-size: 1.4rem;
+      line-height: 120%;
+
+      &_true {
+        color: #01AB1C;
+      }
+
+      &_false {
+        color: #bd060c;
+      }
+    }
+
+    &__row {
+      margin-top: 2.2rem;
+      display: flex;
+    }
+
+    &-calculator {
+      display: flex;
+      margin-left: 3.3rem;
+
+      &__btn, &__input {
+        height: 3.4rem;
+        padding: 0;
+        font-size: 1.3rem;
+        line-height: 2.0rem;
+        letter-spacing: 0.1em;
+        border-radius: 4px;
+      }
+
+      &__btn {
+        width: 3.6rem;
+      }
+
+      &__input {
+        color: #2D9CDB;
+        width: 5.7rem;
+        border: 1px solid #2D9CDB;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 1.1rem;
+        padding-left: 2.2rem;
+      }
+    }
+
+    &__btn {
+      height: 4.9rem;
+      width: 19.4rem;
+      border-radius: 4px;
+      font-size: 1.3rem;
+      line-height: 2.0rem;
+      padding: 0;
+      margin-right: .7rem;
+
+      &_white {
+        border: 1px solid #2D9CDB;
+        background: transparent;
+        color: #2D9CDB;
+      }
+
+      img {
+        margin-left: .8rem;
+        height: auto;
+        width: 2rem;
+      }
     }
   }
+}
 
-  &__block {
-    max-width: 87.4rem;
-    margin-top: 2.2rem;
-    line-height: 150%;
-    color: #828282;
+@media only screen and (max-width: $small-tablet) {
+  .catalog-product {
+    grid-template-columns: 1.2fr 1fr;
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .catalog {
+    &-product {
+      grid-template-columns: 1fr;
+
+      &__content {
+        padding-top: 2rem;
+        padding-left: 0;
+      }
+    }
+
+    &-tab {
+      padding: 3rem 0;
+
+      &__tabs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        border-bottom: none;
+      }
+
+      &__tab {
+        border: 1px solid #26698F;
+        text-align: center;
+        padding: 1.2rem 1.8rem;
+        font-size: 1.6rem;
+        &.active {
+          border-bottom: 1px solid #26698F;
+          background: #26698F;
+          color: #FFFFFF;
+        }
+
+        &:last-child {
+          border: 1px solid #26698F;
+        }
+      }
+    }
   }
 }

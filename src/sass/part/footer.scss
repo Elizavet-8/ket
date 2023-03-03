@@ -1,10 +1,7 @@
 .footer {
   color: #CECECE;
-
-  &__container {
-    background: #6A6A6A;
-    padding: 5.2rem 3.2rem 3.2rem;
-  }
+  background: #6A6A6A;
+  padding: 5.2rem 0 3.2rem;
 
   &__grid {
     display: grid;
@@ -92,9 +89,105 @@
 }
 
 @media only screen and (max-width: $medium-tablet) {
+  .footer {
+    &__column {
+      padding-right: 2rem;
 
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &__item {
+      font-size: 1.4rem;
+
+      br {
+        display: none;
+      }
+    }
+
+    &-bottom {
+      margin-top: 2.4rem;
+      padding-top: 1.2rem;
+      font-size: 1.1rem;
+    }
+  }
 }
 
 @media only screen and (max-width: $small-tablet) {
+  .footer {
+    padding: 3rem 0 1.2rem;
 
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    &__column {
+      padding-right: 5rem;
+
+      &:nth-child(1), &:nth-child(2) {
+        display: none;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .footer {
+    &__item {
+      font-size: 1.2rem;
+
+      br {
+        display: block;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $small-mobile) {
+  .footer {
+    &__subtitle {
+      font-weight: 400;
+      font-size: 1.4rem;
+      line-height: 100%;
+      text-transform: uppercase;
+      width: 100%;
+      border-bottom: 1px solid #CECECE;
+      padding-bottom: 1rem;
+      margin-bottom: 1.2rem;
+    }
+
+    &__column {
+      padding-right: 2rem;
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+    &__svg {
+      width: 1.5rem;
+      margin-right: 0.8rem;
+    }
+
+    &__item {
+      font-size: 1.2rem;
+
+      br {
+        display: block;
+      }
+    }
+    &-bottom {
+      flex-direction: column-reverse;
+      &__text {
+        margin-top: .6rem;
+        text-align: center;
+      }
+    }
+  }
 }

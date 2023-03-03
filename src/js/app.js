@@ -30,6 +30,9 @@ document.addEventListener("DOMContentLoaded", function () {
             581: {
                 slidesPerView: 2,
             },
+            778: {
+                slidesPerView: 3,
+            },
             999: {
                 slidesPerView: 5,
             },
@@ -38,6 +41,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var manufacturers__slider = new Swiper(".manufacturers-slider__slider", {
         slidesPerView: 1,
         spaceBetween: 28,
+        // freeMode: true,
+        // loop: true,
         navigation: {
             nextEl: ".manufacturers-slider__btn-next",
             prevEl: ".manufacturers-slider__btn-prev",

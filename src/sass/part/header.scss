@@ -92,7 +92,7 @@
     }
 
     &__link {
-      font-size: 14px;
+      font-size: 1.4rem;
       line-height: 127.5%;
       color: #3D3D3D;
       font-weight: 500;
@@ -135,7 +135,7 @@
   &__burger {
     display: none;
     position: relative;
-    width: 40px;
+    width: 28px;
     height: auto;
     z-index: 47;
     flex-direction: column;
@@ -146,14 +146,15 @@
     &-line {
       content: "";
       display: block;
-      height: 5px;
-      width: 40px;
+      height: 3px;
+      width: 100%;
       border-radius: 3px;
       transition: 0.5s;
+      background: #838688;
     }
 
     &-line {
-      margin: 5px 0;
+      margin: 3px 0;
     }
 
     &:hover {
@@ -234,39 +235,19 @@
   }
 }
 
-
-@media only screen and (max-width: $large-desktop) {
-}
-
-@media only screen and (max-width: $small-desktop) {
-  .header {
-    &__row {
-      padding-top: 4rem;
-    }
-  }
-}
-
 @media only screen and (max-width: $medium-tablet) {
+  .schedule {
+    display: none;
+  }
+
   .header {
-
-    &-logo {
-      &__svg {
-        margin-right: 0;
-      }
-
-      &__text {
-        display: none;
-      }
-    }
+    position: fixed;
+    z-index: 999;
 
     &__row {
-      padding-top: 1.2rem;
+      padding: 1.8rem 0;
       display: flex;
       justify-content: space-between;
-    }
-
-    &__btn {
-      display: none;
     }
 
     &__burger {
@@ -278,10 +259,10 @@
       z-index: 9;
       top: 0;
       left: 0;
-      min-height: 41.4rem;
+      min-height: 100vh;
       width: 100%;
       height: fit-content;
-      padding: 13.3rem 2rem 7.7rem;
+      padding: 5.5rem 0 7.7rem;
       overflow-y: auto;
       transform: translateX(-100%);
 
@@ -289,23 +270,19 @@
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
+        background: #B9B9B9;
+        padding: 3rem;
       }
 
       &__item {
-        margin: 0 0 3.5rem 0;
+        margin: 0 0 1.5rem;
         min-height: 2.9rem;
         overflow: hidden;
         text-align: center;
 
-        &_dropdown {
-
-          &:hover .sub-menu {
-            display: flex;
-          }
-        }
-
-        &:last-child {
-          margin-bottom: 0;
+        a {
+          padding: 0;
+          color: #FFFFFF;
         }
       }
     }
@@ -329,22 +306,16 @@
           &:before,
           &:after,
           &-line {
+            top: .8rem;
             width: 19px;
             position: absolute;
           }
 
-          &:before {
-            top: 0;
-            transform: rotateZ(45deg);
-          }
-
-          &:after {
-            top: 0;
+          &:before, &:after {
             transform: rotateZ(45deg);
           }
 
           &-line {
-            top: 0;
             right: -4px;
             transform: rotateZ(-45deg);
             margin: 0;

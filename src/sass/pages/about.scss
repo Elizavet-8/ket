@@ -2,7 +2,7 @@
   &-main {
     line-height: 163.9%;
     color: #6F6F6F;
-    padding: 3.5rem 0 11.8rem;
+    padding-bottom: 11.8rem;
 
     &__img {
       width: 73.3rem;
@@ -50,5 +50,73 @@
   &__btn {
     color: #2C2C2C;
     background: #FFFFFF;
+  }
+}
+
+@media only screen and (max-width: $small-desktop) {
+  .about {
+    &-main {
+      &__img {
+        margin-bottom: 2rem;
+      }
+
+      &__text {
+        font-size: 1.8rem;
+      }
+    }
+
+    &-manufacturers {
+      padding: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: $large-tablet) {
+  .about {
+    &-main {
+      &__img {
+        margin: 0 0 2rem 2rem;
+        width: 42rem;
+        height: auto;
+      }
+
+      &__text {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  .tcl__content {
+    background-position: center left;
+    padding: 9rem 6rem;
+  }
+}
+
+
+@media only screen and (max-width: $small-tablet) {
+  .about {
+    &-main {
+      &__img {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $large-mobile) {
+  .about-main {
+    padding-bottom: 5rem;
+  }
+}
+
+@media only screen and (max-width: $small-mobile) {
+  .tcl {
+    &__content {
+      background-position: center left;
+      padding: 6rem 2rem;
+    }
+
+    &__btn {
+      padding: 1.7rem 2.5rem;
+    }
   }
 }

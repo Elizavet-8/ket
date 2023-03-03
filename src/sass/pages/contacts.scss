@@ -1,0 +1,36 @@
+.contacts {
+  &-description {
+    &__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin: 5.2rem -1.8rem 0;
+    }
+  }
+
+  &-application {
+    padding-top: 5.6rem;
+  }
+}
+
+@media only screen and (max-width: $medium-tablet) {
+  .contacts-description {
+    &__list {
+      grid-template-columns: repeat(2, 1fr);
+      margin: -1.5rem;
+      padding-top: 2.5rem;
+    }
+
+    &__item {
+      padding: 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $small-mobile) {
+  .contacts-description {
+    &__list {
+      grid-template-columns: 1fr;
+      margin: -1.5rem 0;
+    }
+  }
+}
