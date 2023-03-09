@@ -235,11 +235,47 @@
   }
 }
 
+.dropdown {
+  position: relative;
+
+  &:active, &:hover, &:focus {
+    .dropdown__menu {
+      display: block;
+    }
+  }
+
+  &__menu {
+    position: absolute;
+    top: 6rem;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: #B9B9B9;
+    border-bottom-left-radius: .8rem;
+    border-bottom-right-radius: .8rem;
+    border-top: none;
+    padding: 2rem 2rem 0;
+    display: none;
+  }
+
+  &__item a {
+    padding: 0 0 1.5rem;
+    font-size: 1.4rem;
+    line-height: 120%;
+    text-transform: none;
+  }
+}
+
 @media only screen and (max-width: $medium-tablet) {
   .schedule {
     display: none;
   }
-
+  .dropdown{
+    &__menu {
+      position: static;
+      padding: 0;
+    }
+  }
   .header {
     position: fixed;
     z-index: 999;

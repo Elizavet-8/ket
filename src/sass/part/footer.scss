@@ -124,15 +124,15 @@
     }
 
     &__column {
-      padding-right: 5rem;
-
-      &:nth-child(1), &:nth-child(2) {
-        display: none;
-      }
+      padding: 0 5rem 2rem 0;
 
       &:last-child {
         padding-right: 0;
       }
+    }
+
+    &-bottom {
+      margin-top: 0;
     }
   }
 }
@@ -146,11 +146,7 @@
         display: block;
       }
     }
-  }
-}
 
-@media only screen and (max-width: $small-mobile) {
-  .footer {
     &__subtitle {
       font-weight: 400;
       font-size: 1.4rem;
@@ -161,6 +157,12 @@
       padding-bottom: 1rem;
       margin-bottom: 1.2rem;
     }
+  }
+}
+
+@media only screen and (max-width: $small-mobile) {
+  .footer {
+
 
     &__column {
       padding-right: 2rem;
@@ -182,8 +184,10 @@
         display: block;
       }
     }
+
     &-bottom {
       flex-direction: column-reverse;
+
       &__text {
         margin-top: .6rem;
         text-align: center;

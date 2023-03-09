@@ -1234,11 +1234,16 @@
 
   .info {
     &__grid {
-      margin: -.5rem;
+      grid-template-columns: 1fr;
+      margin: 0;
     }
 
     &__col {
-      padding: .5rem;
+      padding: 0 0 2.5rem;
+
+      &:last-child {
+        padding: 0;
+      }
     }
   }
 }
